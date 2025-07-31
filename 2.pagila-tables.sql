@@ -242,28 +242,6 @@ CREATE TABLE rental (
     -- FOREIGN KEY (staff_id) to be added after staff table is created
 );
 
-
--- --------------------------------------------------
--- DROP IF EXISTS BLOCK (SAFE RESET BEFORE CREATE)
-IF OBJECT_ID('payment', 'U') IS NOT NULL 
-    DROP TABLE payment;
-
-
--- ==================================================
--- CREATE TABLE PAYMENT (
-CREATE TABLE payment (
-    payment_id INT IDENTITY(1,1) PRIMARY KEY,
-    customer_id INT NOT NULL,
-    staff_id INT NOT NULL,
-    rental_id INT,
-    amount DECIMAL(5,2) NOT NULL,
-    payment_date DATETIME2 NOT NULL,
-    last_update DATETIME2 DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
-    FOREIGN KEY (rental_id) REFERENCES rental(rental_id)
-    -- FOREIGN KEY (staff_id) to be added after staff table is created
-);
-
 -- ==================================================
 -- CREATE TABLE PAYMENT (
 CREATE TABLE payment_p2022_01 (
