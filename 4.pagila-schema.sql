@@ -402,3 +402,5 @@ SELECT * FROM payment_p2022_06
 UNION ALL
 SELECT * FROM payment_p2022_07
 ;
+
+GO
