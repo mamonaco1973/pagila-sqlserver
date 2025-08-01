@@ -1,10 +1,3 @@
-
-
--- ==================================================
--- SET TARGET DATABASE
-USE pagila;
-GO
-
 -- --------------------------------------------------
 -- ADDING FOREIGN KEY CONSTRAINT
 ALTER TABLE city

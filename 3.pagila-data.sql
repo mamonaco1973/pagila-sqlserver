@@ -1,6 +1,3 @@
-use pagila;
-GO
-
 SET IDENTITY_INSERT actor ON;
 GO
 

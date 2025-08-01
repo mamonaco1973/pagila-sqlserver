@@ -1,10 +1,3 @@
-
-
--- ==================================================
--- SET TARGET DATABASE
-USE pagila;
-
-
 -- --------------------------------------------------
 -- DROP IF EXISTS BLOCK (SAFE RESET BEFORE CREATE)
 IF OBJECT_ID('actor', 'U') IS NOT NULL
