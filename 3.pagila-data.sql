@@ -49878,3 +49878,21 @@ INSERT INTO payment_p2022_07 (payment_id, customer_id, staff_id, rental_id, amou
 (32098, 264, 2, 14243, 2.99, N'2022-07-06T23:14:23.213321');
 
 SET IDENTITY_INSERT payment_p2022_07 OFF;
+
+GO
+
+CREATE VIEW payment AS
+SELECT * FROM payment_p2022_01
+UNION ALL
+SELECT * FROM payment_p2022_02
+UNION ALL
+SELECT * FROM payment_p2022_03
+UNION ALL
+SELECT * FROM payment_p2022_04
+UNION ALL
+SELECT * FROM payment_p2022_05
+UNION ALL
+SELECT * FROM payment_p2022_06
+UNION ALL
+SELECT * FROM payment_p2022_07
+;
