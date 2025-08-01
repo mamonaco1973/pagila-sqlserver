@@ -31,13 +31,6 @@ ADD CONSTRAINT fk_rental_staff FOREIGN KEY (staff_id) REFERENCES staff(staff_id)
 GO
 
 -- --------------------------------------------------
--- ADDING FOREIGN KEY CONSTRAINT
-ALTER TABLE payment
-ADD CONSTRAINT fk_payment_staff FOREIGN KEY (staff_id) REFERENCES staff(staff_id);
-GO
--- Index on customer last name
-
--- --------------------------------------------------
 -- INDEX CREATION FOR PERFORMANCE
 CREATE INDEX idx_customer_last_name ON customer(last_name);
 GO
@@ -59,14 +52,6 @@ GO
 -- INDEX CREATION FOR PERFORMANCE
 CREATE INDEX idx_rental_customer_id ON rental(customer_id);
 GO
--- Index on payment (customer_id)
-
--- --------------------------------------------------
--- INDEX CREATION FOR PERFORMANCE
-CREATE INDEX idx_payment_customer_id ON payment(customer_id);
-GO
-----
-
 
 -- --------------------------------------------------
 -- DROP IF EXISTS BLOCK (SAFE RESET BEFORE CREATE)
