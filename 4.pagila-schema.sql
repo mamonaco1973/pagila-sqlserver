@@ -30,6 +30,55 @@ ALTER TABLE rental
 ADD CONSTRAINT fk_rental_staff FOREIGN KEY (staff_id) REFERENCES staff(staff_id);
 GO
 
+ALTER TABLE payment_p2022_01
+ADD CONSTRAINT fk_payment_staff_01
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_02
+ADD CONSTRAINT fk_payment_staff_02
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_03
+ADD CONSTRAINT fk_payment_staff_03
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_04
+ADD CONSTRAINT fk_payment_staff_04
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_05
+ADD CONSTRAINT fk_payment_staff_05
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_06
+ADD CONSTRAINT fk_payment_staff_06
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
+ALTER TABLE payment_p2022_07
+ADD CONSTRAINT fk_payment_staff_07
+FOREIGN KEY (staff_id)
+REFERENCES staff(staff_id);
+
+GO
+
 -- --------------------------------------------------
 -- INDEX CREATION FOR PERFORMANCE
 CREATE INDEX idx_customer_last_name ON customer(last_name);
