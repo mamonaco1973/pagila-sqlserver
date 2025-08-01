@@ -79,6 +79,13 @@ REFERENCES staff(staff_id);
 
 GO
 
+ALTER TABLE store
+ADD CONSTRAINT fk_address_id_01
+FOREIGN KEY (address_id)
+REFERENCES address(address_id);
+
+GO
+
 -- --------------------------------------------------
 -- INDEX CREATION FOR PERFORMANCE
 CREATE INDEX idx_customer_last_name ON customer(last_name);
